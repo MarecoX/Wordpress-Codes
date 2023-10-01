@@ -1,12 +1,12 @@
 $( document ).ready(function() {
             $( ".btn-close" ).click(function() {
-                $(".modal").removeClass("show");
+                $(".modal2").removeClass("show");
                 setTimeout(() => {
                     document.removeEventListener('mouseout', mouseEvent);
                 }, 5000);
             })
-            $( ".modal" ).click(function() {
-                $(".modal").removeClass("show");
+            $( ".modal2" ).click(function() {
+                $(".modal2").removeClass("show");
                 setTimeout(() => {
                     document.removeEventListener('mouseout', mouseEvent);
                 }, 5000);
@@ -23,7 +23,7 @@ const exit = e => {
         e.keyCode === 27; // user hits escape
 
     if (shouldExit) {
-        $(".modal").removeClass("show"); 
+        $(".modal2").removeClass("show"); 
         setTimeout(() => {
             document.removeEventListener('mouseout', mouseEvent);
         }, 5000);
@@ -37,6 +37,6 @@ const mouseEvent = e => {
         e.clientY < 10;
 
     if (shouldShowExitIntent) {
-        $(".modal").addClass("show"); 
+        $(".modal2").addClass("show"); 
     }
 };
